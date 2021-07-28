@@ -18,7 +18,7 @@ public class CodeRestController {
     }
 
     @GetMapping(path = "/api/code/{id}")
-    public Code getApiCode(@PathVariable long id) {
+    public Code getApiCode(@PathVariable String id) {
         return codeService.get(id);
     }
 

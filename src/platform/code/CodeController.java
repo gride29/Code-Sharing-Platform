@@ -17,7 +17,7 @@ public class CodeController {
     private final CodeService codeService;
 
     @GetMapping("/code/{id}")
-    public ModelAndView getCode(@PathVariable long id) {
+    public ModelAndView getCode(@PathVariable String id) {
         Map<String, Object> params = new HashMap<>();
         Code code = codeService.get(id);
         params.put("code", code);
